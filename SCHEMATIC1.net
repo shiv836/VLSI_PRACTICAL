@@ -1,0 +1,29 @@
+* source HALF ADDER
+M_M1         N06416 N06457 0 0 MbreakN           
+M_M2         N06416 N06457 N06420 N06420 MbreakP           
+V_V1         N06420 0 5Vdc
+V_A         N06457 0  
++PULSE 5 0 0 1n 1n 5m 10m
+M_M3         N06863 N06807 N06769 N06769 MbreakP           
+M_M4         N06863 N06807 0 0 MbreakN           
+V_b         N06807 0  
++PULSE 5 0 0 1n 1n 2.5m 5m
+V_V2         N06769 0 5Vdc
+V_V3         N07205 0 5Vdc
+M_M5         N07233 N06416 N07205 N07205 MbreakP           
+M_M6         N07241 N06457 N07233 N07233 MbreakP           
+M_M7         N07233 N06863 N07205 N07205 MbreakP           
+M_M8         N07241 N10360 N07233 N07233 MbreakP           
+M_M9         N07241 N06416 N07357 N07357 MbreakN           
+M_M10         N07357 N06863 0 0 MbreakN           
+M_M11         N07241 N10452 N07361 N07361 MbreakN           
+M_M12         N07361 N10360 0 0 MbreakN           
+V_b1         N10360 0  
++PULSE 5 0 0 1n 1n 2.5m 5m
+V_A1         N10452 0  
++PULSE 5 0 0 1n 1n 5m 10m
+V_V4         N10798 0 5Vdc
+M_M13         N10866 N06416 N10798 N10798 MbreakP           
+M_M14         N10995 N06863 N10866 N10866 MbreakP           
+M_M15         N10995 N06863 0 0 MbreakN           
+M_M16         N10995 N06416 0 0 MbreakN           

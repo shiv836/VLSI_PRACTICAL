@@ -1,0 +1,172 @@
+
+**** 03/26/21 23:15:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-halfFir"  [ c:\cadence\half adder-pspicefiles\schematic1\halffir.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "halfFir.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../half adder-pspicefiles/half adder.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HALF ADDER
+M_M1         N06416 N06457 0 0 MbreakN           
+M_M2         N06416 N06457 N06420 N06420 MbreakP           
+V_V1         N06420 0 5Vdc
+V_A         N06457 0  
++PULSE 5 0 0 1n 1n 5m 10m
+M_M3         N06863 N06807 N06769 N06769 MbreakP           
+M_M4         N06863 N06807 0 0 MbreakN           
+V_b         N06807 0  
++PULSE 5 0 0 1n 1n 2.5m 5m
+V_V2         N06769 0 5Vdc
+V_V3         N07205 0 5Vdc
+M_M5         N07233 N06416 N07205 N07205 MbreakP           
+M_M6         N07241 N06457 N07233 N07233 MbreakP           
+M_M7         N07233 N06863 N07205 N07205 MbreakP           
+M_M8         N07241 N10360 N07233 N07233 MbreakP           
+M_M9         N07241 N06416 N07357 N07357 MbreakN           
+M_M10         N07357 N06863 0 0 MbreakN           
+M_M11         N07241 N10452 N07361 N07361 MbreakN           
+M_M12         N07361 N10360 0 0 MbreakN           
+V_b1         N10360 0  
++PULSE 5 0 0 1n 1n 2.5m 5m
+V_A1         N10452 0  
++PULSE 5 0 0 1n 1n 5m 10m
+V_V4         N10798 0 5Vdc
+M_M13         N10866 N06416 N10798 N10798 MbreakP           
+M_M14         N10995 N06863 N10866 N10866 MbreakP           
+M_M15         N10995 N06863 0 0 MbreakN           
+M_M16         N10995 N06416 0 0 MbreakN           
+
+**** RESUMING halfFir.cir ****
+.END
+
+**** 03/26/21 23:15:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-halfFir"  [ c:\cadence\half adder-pspicefiles\schematic1\halffir.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakP         MbreakN         
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               0            
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 03/26/21 23:15:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-halfFir"  [ c:\cadence\half adder-pspicefiles\schematic1\halffir.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N06416) 50.10E-09 (N06420)    5.0000 (N06457)    5.0000 (N06769)    5.0000     
+
+(N06807)    5.0000 (N06863) 50.10E-09 (N07205)    5.0000 (N07233)    5.0000     
+
+(N07241) 200.4E-09 (N07357) 91.15E-09 (N07361) 100.2E-09 (N10360)    5.0000     
+
+(N10452)    5.0000 (N10798)    5.0000 (N10866)    5.0000 (N10995)    5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.010E-12
+    V_A          0.000E+00
+    V_b          0.000E+00
+    V_V2        -5.010E-12
+    V_V3        -1.002E-11
+    V_b1         0.000E+00
+    V_A1         0.000E+00
+    V_V4        -1.002E-11
+
+    TOTAL POWER DISSIPATION   1.50E-10  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+
+          JOB CONCLUDED
+
+**** 03/26/21 23:15:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-halfFir"  [ c:\cadence\half adder-pspicefiles\schematic1\halffir.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .27
+
